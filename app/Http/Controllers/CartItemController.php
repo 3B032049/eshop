@@ -32,8 +32,9 @@ class CartItemController extends Controller
      */
     public function store(StoreCartItemRequest $request)
     {
-        //
-    }
+        //dd($request);
+        auth()->user()->cartItems()->create($request->all());
+        return back();    }
 
     /**
      * Display the specified resource.
