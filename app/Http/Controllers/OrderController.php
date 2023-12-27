@@ -13,8 +13,11 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $orders = auth()->user()->orders;
+        $data = [
+            'orders'=>$orders,
+        ];
+        return view('orders.index', $data);    }
 
     /**
      * Show the form for creating a new resource.
@@ -37,8 +40,10 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        //
-    }
+        $data = [
+            'order'=>$order,
+        ];
+        return view('orders.show', $data);    }
 
     /**
      * Show the form for editing the specified resource.
