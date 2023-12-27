@@ -16,12 +16,12 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function cart_items()
+    public function cartItems()
     {
         return $this->hasMany(CartItem::class);
     }
 
-    public function order_items()
+    public function orderItems()
     {
         return $this->hasMany(OrderItem::class);
     }
