@@ -14,6 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
+        //
         return 'index';
     }
 
@@ -22,6 +23,7 @@ class ProductController extends Controller
      */
     public function create()
     {
+        //
         return 'create';
     }
 
@@ -30,8 +32,8 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
+        //
         return 'store';
-
     }
 
     /**
@@ -39,11 +41,10 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-    //dd($product);
+        //dd($product);
         $data = [
             'product' => $product,
             'categories' => Category::all(),
-
         ];
         return view('products.show', $data);
     }
@@ -53,6 +54,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
+        //
         return 'edit';
     }
 
@@ -61,6 +63,7 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
+        //
         return 'update';
     }
 
@@ -69,6 +72,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        return 'destroy';
+        //
+        return 'detory';
     }
 }
