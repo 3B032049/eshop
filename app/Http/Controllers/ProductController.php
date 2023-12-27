@@ -38,8 +38,11 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return 'show';
-
+    //dd($product);
+        $data = [
+            'product' => $product,
+        ];
+        return view('products.show', $data);
     }
 
     /**
